@@ -1,0 +1,17 @@
+* {
+  font-family: Lato;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.3);
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+}

@@ -1,0 +1,17 @@
+<div class="content" *ngIf="isShowList" [@inOutAnimation]>
+  <ng-container *ngTemplateOutlet="listTemplate; context: {data: data}"></ng-container>
+</div>
+<button (click)="onBtnClick()">{{ buttonName }}</button>
+
+<ng-template #listTemplate let-data="data">
+  <ul>
+    <ng-container *ngFor="let list of data">
+      <li (click)="onListClick(list)">
+        <span>{{ list.name }}</span>
+        <i *ngIf="list.children.length" class="right-arrow">
+          >
+        </i>
+      </li>
+    </ng-container>
+  </ul>
+</ng-template>
